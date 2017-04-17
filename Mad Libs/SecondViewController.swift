@@ -13,11 +13,29 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var wordsLeftLabel: UILabel!
     @IBOutlet weak var inputField: UITextField!
     
+    var storyText = Story(stream: "")
+    var contents = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let storyList = ["madlib0_simple", "madlib1_tarzan", "madlib2_university", "madlib3_clothes", "madlib4_dance"]
+        let randomIndex = Int(arc4random_uniform(UInt32(storyList.count)))
+        if let filepath = Bundle.main.path(forResource: storyList[randomIndex], ofType: "txt") {
+            do {
+                contents = try String(contentsOfFile: filepath)
+            } catch {
+                print("contents could not be loaded")
+            }
+        } else {
+            print("example.txt not found")
+        }
+        
+        storyText = Story(stream: contents)
+        
+        if storyText.getPlaceholderRemainingCount() != 0 {
+            inputField.placeholder = storyText.getNextPlaceholder()
+            wordsLeftLabel.text = "\(storyText.getPlaceholderCount()) words left."
+        }
     }
 
     override func didReceiveMemoryWarning() {
