@@ -12,6 +12,7 @@
 		E90F14351EA2A19A0066615E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90F14331EA2A19A0066615E /* Main.storyboard */; };
 		E90F14371EA2A19A0066615E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90F14361EA2A19A0066615E /* Assets.xcassets */; };
 		E90F143A1EA2A19A0066615E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90F14381EA2A19A0066615E /* LaunchScreen.storyboard */; };
+		E9106BCC1EA5165E007DA9E8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9106BCB1EA5165E007DA9E8 /* ThirdViewController.swift */; };
 		E914CF911EA3DA4000433F37 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E914CF901EA3DA4000433F37 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		E90F14361EA2A19A0066615E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E90F14391EA2A19A0066615E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E90F143B1EA2A19A0066615E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9106BCB1EA5165E007DA9E8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E914CF901EA3DA4000433F37 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 				E90F142F1EA2A19A0066615E /* AppDelegate.swift */,
 				E90F14311EA2A19A0066615E /* ViewController.swift */,
 				E90F14331EA2A19A0066615E /* Main.storyboard */,
+				E9106BCB1EA5165E007DA9E8 /* ThirdViewController.swift */,
 				E914CF901EA3DA4000433F37 /* SecondViewController.swift */,
 				E90F14361EA2A19A0066615E /* Assets.xcassets */,
 				E90F14381EA2A19A0066615E /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				E914CF911EA3DA4000433F37 /* SecondViewController.swift in Sources */,
 				E90F14321EA2A19A0066615E /* ViewController.swift in Sources */,
+				E9106BCC1EA5165E007DA9E8 /* ThirdViewController.swift in Sources */,
 				E90F14301EA2A19A0066615E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,14 +1,14 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  Mad Libs
 //
-//  Created by Thomas Hamburger on 16-04-17.
+//  Created by Thomas Hamburger on 17-04-17.
 //  Copyright © 2017 Thomas Hamburger. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +22,6 @@ class SecondViewController: UIViewController {
     }
     
 
-    @IBAction func nextButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "StoryScreen", sender: nil)
-    }
     /*
     // MARK: - Navigation
 
