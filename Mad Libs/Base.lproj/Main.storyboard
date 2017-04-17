@@ -77,11 +77,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tVl-gZ-SL7">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tVl-gZ-SL7">
                                 <rect key="frame" x="65" y="237" width="194.5" height="94"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihr-Eh-lTa">
-                                        <rect key="frame" x="76" y="0.0" width="42" height="30"/>
+                                        <rect key="frame" x="76.5" y="0.0" width="42" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTM-Z4-xMC">
-                                        <rect key="frame" x="74" y="64" width="46" height="30"/>
+                                        <rect key="frame" x="74.5" y="64" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="nextButton:" destination="0Qg-N1-zp7" eventType="touchUpInside" id="Bog-cV-PTo"/>
@@ -106,8 +106,8 @@
                         <constraints>
                             <constraint firstItem="Ndq-wy-VvB" firstAttribute="top" secondItem="a50-lB-QYk" secondAttribute="bottom" constant="8" id="LZq-v6-SNB"/>
                             <constraint firstItem="tVl-gZ-SL7" firstAttribute="centerY" secondItem="fz5-X1-RHU" secondAttribute="centerY" id="XEh-gl-KSa"/>
-                            <constraint firstItem="Ndq-wy-VvB" firstAttribute="centerX" secondItem="fz5-X1-RHU" secondAttribute="centerX" id="mcb-O6-Hpz"/>
-                            <constraint firstItem="tVl-gZ-SL7" firstAttribute="centerX" secondItem="fz5-X1-RHU" secondAttribute="centerX" id="qIa-ds-5QE"/>
+                            <constraint firstItem="Ndq-wy-VvB" firstAttribute="centerX" secondItem="fz5-X1-RHU" secondAttribute="centerX" constant="2" id="mcb-O6-Hpz"/>
+                            <constraint firstItem="tVl-gZ-SL7" firstAttribute="centerX" secondItem="fz5-X1-RHU" secondAttribute="centerX" constant="2.25" id="qIa-ds-5QE"/>
                         </constraints>
                     </view>
                     <connections>
@@ -130,15 +130,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is8-oc-ejf">
-                                <rect key="frame" x="16" y="28" width="288" height="267"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="is8-oc-ejf">
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="90F-7B-tXT" firstAttribute="top" secondItem="is8-oc-ejf" secondAttribute="bottom" id="ABk-bt-Ua8"/>
+                            <constraint firstItem="is8-oc-ejf" firstAttribute="trailing" secondItem="KEp-89-cAC" secondAttribute="trailingMargin" id="WLD-TG-Kd3"/>
+                            <constraint firstItem="is8-oc-ejf" firstAttribute="leading" secondItem="KEp-89-cAC" secondAttribute="leadingMargin" id="bLG-Bb-UnS"/>
+                            <constraint firstItem="is8-oc-ejf" firstAttribute="top" secondItem="O4Z-H3-odP" secondAttribute="bottom" id="skE-dC-FMH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Aw-UF-85z" userLabel="First Responder" sceneMemberID="firstResponder"/>
