@@ -111,6 +111,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="inputField" destination="xaZ-px-Re8" id="8GI-vA-Si2"/>
+                        <outlet property="wordsLeftLabel" destination="ihr-Eh-lTa" id="oC4-kG-inM"/>
                         <segue destination="eUd-Zt-uGW" kind="show" identifier="StoryScreen" id="1eF-3F-5VZ"/>
                     </connections>
                 </viewController>

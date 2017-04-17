@@ -9,6 +9,10 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var wordsLeftLabel: UILabel!
+    @IBOutlet weak var inputField: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +27,9 @@ class SecondViewController: UIViewController {
     
 
     @IBAction func nextButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "StoryScreen", sender: nil)
+        if inputField.text! != "" {
+            self.performSegue(withIdentifier: "StoryScreen", sender: nil)
+        }
     }
     /*
     // MARK: - Navigation
