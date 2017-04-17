@@ -147,6 +147,9 @@
                             <constraint firstItem="is8-oc-ejf" firstAttribute="top" secondItem="O4Z-H3-odP" secondAttribute="bottom" id="skE-dC-FMH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="storyLabel" destination="is8-oc-ejf" id="tfH-87-BmM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Aw-UF-85z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

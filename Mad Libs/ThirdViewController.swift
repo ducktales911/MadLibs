@@ -10,10 +10,12 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+    @IBOutlet weak var storyLabel: UILabel!
+    var completedStory: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        storyLabel.text = completedStory!
     }
 
     override func didReceiveMemoryWarning() {

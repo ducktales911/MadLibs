@@ -46,17 +46,25 @@ class SecondViewController: UIViewController {
 
     @IBAction func nextButton(_ sender: Any) {
         if inputField.text! != "" {
-            self.performSegue(withIdentifier: "StoryScreen", sender: nil)
+            
+            storyText.fillInPlaceholder(word: inputField.text!)
+            // Als wordsLeft 0 is, ga naar StoryScreen, 
+            if (storyText.getPlaceholderRemainingCount() == 0) {
+                self.performSegue(withIdentifier: "StoryScreen", sender: nil)
+            } else {
+                inputField.text = ""
+                inputField.placeholder = storyText.getNextPlaceholder()
+                wordsLeftLabel.text = "\(storyText.getPlaceholderRemainingCount()) words left."
+            }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if let thirdVC = segue.destination as? ThirdViewController {
+            thirdVC.completedStory = storyText.toString()
+            storyText.clear()
+        }
     }
-    */
 
 }
