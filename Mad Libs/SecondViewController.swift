@@ -14,10 +14,10 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var inputField: UITextField!
     
     var storyText = Story(stream: "")
-    var contents = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var contents = String()
         let storyList = ["madlib0_simple", "madlib1_tarzan", "madlib2_university", "madlib3_clothes", "madlib4_dance"]
         let randomIndex = Int(arc4random_uniform(UInt32(storyList.count)))
         if let filepath = Bundle.main.path(forResource: storyList[randomIndex], ofType: "txt") {
@@ -31,25 +31,20 @@ class SecondViewController: UIViewController {
         }
         
         storyText = Story(stream: contents)
+        inputField.placeholder = storyText.getNextPlaceholder()
+        wordsLeftLabel.text = "\(storyText.getPlaceholderCount()) words left."
         
-        if storyText.getPlaceholderRemainingCount() != 0 {
-            inputField.placeholder = storyText.getNextPlaceholder()
-            wordsLeftLabel.text = "\(storyText.getPlaceholderCount()) words left."
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func nextButton(_ sender: Any) {
         if inputField.text! != "" {
-            
             storyText.fillInPlaceholder(word: inputField.text!)
-            // Als wordsLeft 0 is, ga naar StoryScreen, 
-            if (storyText.getPlaceholderRemainingCount() == 0) {
+            
+            if storyText.isFilledIn() {
                 self.performSegue(withIdentifier: "StoryScreen", sender: nil)
             } else {
                 inputField.text = ""
@@ -60,7 +55,6 @@ class SecondViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if let thirdVC = segue.destination as? ThirdViewController {
             thirdVC.completedStory = storyText.toString()
             storyText.clear()
