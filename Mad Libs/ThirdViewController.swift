@@ -10,12 +10,13 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
-    @IBOutlet weak var storyLabel: UILabel!
+    
+    @IBOutlet weak var storyTextView: UITextView!
     var completedStory: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        storyLabel.text = completedStory!
+        storyTextView.text = completedStory!
     }
 
     override func didReceiveMemoryWarning() {

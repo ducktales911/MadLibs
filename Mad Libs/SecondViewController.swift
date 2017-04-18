@@ -15,6 +15,7 @@ class SecondViewController: UIViewController {
     
     var storyText = Story(stream: "")
 
+    // selecteert een random story en geeft dit als string om een Story object te maken
     override func viewDidLoad() {
         super.viewDidLoad()
         var contents = String()
@@ -31,8 +32,8 @@ class SecondViewController: UIViewController {
         }
         
         storyText = Story(stream: contents)
-        inputField.placeholder = storyText.getNextPlaceholder()
-        wordsLeftLabel.text = "\(storyText.getPlaceholderCount()) words left."
+        inputField.placeholder = "please enter a/an " + storyText.getNextPlaceholder().lowercased()
+        wordsLeftLabel.text = "\(storyText.getPlaceholderCount()) word(s) left."
         
     }
 
@@ -40,6 +41,7 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // vult placeholders in tot ze allemaal ingevuld zijn, daarna wordt de segue uitgevoerd
     @IBAction func nextButton(_ sender: Any) {
         if inputField.text! != "" {
             storyText.fillInPlaceholder(word: inputField.text!)
@@ -48,12 +50,13 @@ class SecondViewController: UIViewController {
                 self.performSegue(withIdentifier: "StoryScreen", sender: nil)
             } else {
                 inputField.text = ""
-                inputField.placeholder = storyText.getNextPlaceholder()
-                wordsLeftLabel.text = "\(storyText.getPlaceholderRemainingCount()) words left."
+                inputField.placeholder = "please enter a/an " + storyText.getNextPlaceholder().lowercased()
+                wordsLeftLabel.text = "\(storyText.getPlaceholderRemainingCount()) word(s) left."
             }
         }
     }
     
+    // als segue plaatsvindt, dan wordt de complete story doorgegeven aan de derde vieuwcontroller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let thirdVC = segue.destination as? ThirdViewController {
             thirdVC.completedStory = storyText.toString()
