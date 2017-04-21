@@ -8,3 +8,5 @@ into the story but it is not shown yet, and the next placeholder is asked for. O
 the story will be shown.
 
 ![welcome screen](https://github.com/ducktales911/MadLibs/blob/master/docs/Schermafbeelding%202017-04-18%20om%2014.33.04.png)
+![fill-in screen](https://github.com/ducktales911/MadLibs/blob/master/docs/Schermafbeelding%202017-04-18%20om%2014.33.46.png)
+![story screen](https://github.com/ducktales911/MadLibs/blob/master/docs/Schermafbeelding%202017-04-18%20om%2014.39.08.png)
